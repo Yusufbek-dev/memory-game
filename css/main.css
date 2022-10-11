@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+body {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/bg3.jpg);
+  background-position: contain;
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Times New Roman", Times, serif;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  color: #fff;
+}
+
+.container {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 50%;
+  perspective: 1000px;
+}
+@media (max-width: 1024px) {
+  .container {
+    width: 55%;
+  }
+}
+@media (max-width: 824px) {
+  .container {
+    width: 75%;
+  }
+}
+@media (max-width: 624px) {
+  .container {
+    width: 80%;
+  }
+}
+@media (max-width: 524px) {
+  .container {
+    width: 85%;
+  }
+}
+@media (max-width: 424px) {
+  .container {
+    width: 95%;
+  }
+}
+
+.card {
+  cursor: pointer;
+  position: relative;
+  margin: 10px;
+  width: 150px;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+  transition: 0.3s;
+}
+@media (max-width: 1024px) {
+  .card {
+    width: 140px;
+  }
+}
+@media (max-width: 824px) {
+  .card {
+    width: 120px;
+  }
+}
+@media (max-width: 624px) {
+  .card {
+    width: 110px;
+  }
+}
+@media (max-width: 524px) {
+  .card {
+    width: 100px;
+  }
+}
+@media (max-width: 424px) {
+  .card {
+    width: 90px;
+  }
+}
+.card img {
+  max-width: 100%;
+}
+.card .front {
+  transform: rotateY(0deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.card .back {
+  transform: rotateY(180deg);
+  position: static;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateY(180deg);
+}
+
+.card.show {
+  transform: rotateY(0);
+}
+.card.show .front {
+  z-index: 2;
+}
+
+/*
+
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.642);
+}
+#cards {
+  margin: 2% auto;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 50vh;
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+  gap: 20px;
+  .card {
+    width: 20%;
+    transform-style:preserve-3d;
+    transform: translateY(0deg);
+    max-height: 200px;
+    transition: .3s;
+    cursor: pointer;
+    img {
+      position: relative;
+      z-index: -1;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+  .card .front {
+    background-color: #fff;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 100%;
+  }
+  @media (max-width: 1024px) {
+    margin: 3% auto;
+    width: 70%;
+  }
+  @media (max-width:600px) {
+    margin: 4% auto;
+    width: 85%;
+  }
+  @media (max-width:400px) {
+    margin: 5% auto;
+    width: 95%;
+  }
+}
+*/
+
+/*# sourceMappingURL=main.css.map */
